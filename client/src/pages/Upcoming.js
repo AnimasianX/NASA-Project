@@ -28,15 +28,15 @@ const Upcoming = props => {
   const tableBody = useMemo(() => {
     return launches?.filter((launch) => launch.upcoming)
       .map((launch) => {
-        return <tr key={String(launch.flightNo)}>
+        return <tr key={String(launch.flightNumber)}>
           <td>
             <Clickable style={{ color: "red" }}>
-              <Link className={classes.link} onClick={() => abortLaunch(launch.flightNo)}>
+              <Link className={classes.link} onClick={() => abortLaunch(launch.flightNumber)}>
                 ✖
               </Link>
             </Clickable>
           </td>
-          <td>{launch.flightNo}</td>
+          <td>{launch.flightNumber}</td>
           <td>{new Date(launch.launchDate).toDateString()}</td>
           <td>{launch.mission}</td>
           <td>{launch.rocket}</td>
