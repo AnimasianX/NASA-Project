@@ -3,7 +3,6 @@ const http = require('http');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-const MONGO_URL = process.env.MONGO_URL;
 const { mongoConnect } = require('./services/mongo');
 
 
